@@ -2339,10 +2339,16 @@ button {
 @media screen and (max-width: 768px) {
 
     /* ── Header: position relative (not sticky) on mobile ── */
-    body, html {
-    overflow-x: hidden;
-    max-width: 100vw;
+    body {
+       overflow-x: hidden;
+       max-width: 100vw;
+       -webkit-overflow-scrolling: touch;
 }
+     html {
+        overflow-x: hidden;
+       max-width: 100vw;
+        scroll-behavior: smooth;
+    }
     .main-header {
         position: relative;
         top: auto;
